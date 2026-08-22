@@ -3,4 +3,4 @@ display_name: B站视频下载助手
 description: 专攻B站视频下载，自动识别卡片链接/b23短链/BV号，一键下载发送。
 version: 1.0.0
 author: miko
-repo: ""
+repo: "https://github.com/larzision/astrbot_plugin_bilibili_dl"
