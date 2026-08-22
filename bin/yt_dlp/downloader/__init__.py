@@ -33,9 +33,7 @@ from .mhtml import MhtmlFD
 from .niconico import NiconicoLiveFD
 from .rtmp import RtmpFD
 from .websocket import WebSocketFragmentFD
-from .youtube_live_chat import YoutubeLiveChatFD
 from .bunnycdn import BunnyCdnFD
-from .soop import SoopVodFD
 
 PROTOCOL_MAP = {
     'rtmp': RtmpFD,
@@ -51,10 +49,7 @@ PROTOCOL_MAP = {
     'niconico_live': NiconicoLiveFD,
     'fc2_live': FC2LiveFD,
     'websocket_frag': WebSocketFragmentFD,
-    'youtube_live_chat': YoutubeLiveChatFD,
-    'youtube_live_chat_replay': YoutubeLiveChatFD,
     'bunnycdn': BunnyCdnFD,
-    'soopvod': SoopVodFD,
 }
 
 
