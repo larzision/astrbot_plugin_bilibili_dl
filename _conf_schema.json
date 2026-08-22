@@ -1,0 +1,83 @@
+{
+  "auto": {
+    "description": "自动触发设置",
+    "type": "object",
+    "items": {
+      "enable": {
+        "description": "自动识别消息中的B站链接并下载",
+        "type": "bool",
+        "default": true,
+        "hint": "开启后群里直接发B站链接/卡片即可自动下载"
+      }
+    }
+  },
+  "download": {
+    "description": "下载设置",
+    "type": "object",
+    "items": {
+      "max_quality": {
+        "description": "最高画质",
+        "type": "string",
+        "default": "720p",
+        "options": [
+          "480p",
+          "720p",
+          "1080p"
+        ],
+        "hint": "限制视频最高画质"
+      },
+      "max_size_mb": {
+        "description": "最大文件大小 (MB)",
+        "type": "int",
+        "default": 100,
+        "hint": "预估超过此大小直接跳过下载，不发视频"
+      },
+      "auto_delete_seconds": {
+        "description": "临时文件清理时间 (秒)",
+        "type": "int",
+        "default": 90,
+        "hint": "下载后多久自动删除临时文件"
+      },
+      "prefer_h264": {
+        "description": "优先 H.264 编码",
+        "type": "bool",
+        "default": true,
+        "hint": "H.264兼容性最好"
+      },
+      "mode": {
+        "description": "下载模式",
+        "type": "string",
+        "default": "video",
+        "options": [
+          "video",
+          "audio"
+        ],
+        "hint": "video=完整视频，audio=只下音频"
+      },
+      "save_dir": {
+        "description": "视频文件保存路径",
+        "type": "string",
+        "default": "",
+        "hint": "留空=插件临时目录(发完自动删)，填写路径=永久保存"
+      },
+      "audio_save_dir": {
+        "description": "音频文件保存路径",
+        "type": "string",
+        "default": "",
+        "hint": "留空=插件临时目录(发完自动删)，填写路径=永久保存"
+      },
+      "save_file": {
+        "description": "是否保存文件",
+        "type": "bool",
+        "default": false,
+        "hint": "开=下载的文件保留在save_dir，关=发完自动删除"
+      },
+      "no_media": {
+        "description": "保存目录添加.nomedia防止手机相册读取",
+        "type": "bool",
+        "default": false,
+        "hint": "开=自动在视频/音频保存目录创建.nomedia空文件（Android相册不再扫描），关=检查并删除已有的.nomedia。改配置后5秒内自动生效"
+      }
+    }
+  }
+}
